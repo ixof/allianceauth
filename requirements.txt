@@ -9,6 +9,7 @@ slugify
 requests-oauthlib
 sleekxmpp
 redis
+SlackClient
 
 # Django Stuff #
 django>=1.10,<2.0

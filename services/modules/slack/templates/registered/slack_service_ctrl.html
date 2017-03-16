@@ -1,0 +1,19 @@
+{% load i18n %}
+
+<tr>
+    <td class="text-center">{{ service_name }}</td>
+    <td class="text-center">{{ username }}</td>
+    <td class="text-center"><a href="{{ service_url }}">{{ service_url }}</a></td>
+    <td class="text-center">
+		{% if not invited %}
+		<a href="{% url urls.auth_activate %}" class="btn btn-warning">
+			<span class="fa fa-slack"></span>
+		</a>
+		{% else %}
+		
+		<a href="{{ service_url }}" title="Visit" class="btn btn-success">
+			<span class="glyphicon glyphicon-arrow-right"></span>
+		</a>
+		{% endif %}
+    </td>
+</tr>

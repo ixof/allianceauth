@@ -82,6 +82,7 @@ INSTALLED_APPS = [
     'services.modules.phpbb3',
     'services.modules.xenforo',
     'services.modules.teamspeak3',
+    'services.modules.slack'
 ]
 
 MIDDLEWARE = [
@@ -544,6 +545,16 @@ FLEETUP_APP_KEY = os.environ.get('AA_FLEETUP_APP_KEY', '')
 FLEETUP_USER_ID = os.environ.get('AA_FLEETUP_USER_ID', '')
 FLEETUP_API_ID = os.environ.get('AA_FLEETUP_API_ID', '')
 FLEETUP_GROUP_ID = os.environ.get('AA_FLEETUP_GROUP_ID', '')
+
+#########################
+# Slack Configuration
+#########################
+# SLACK_TOKEN - Token from admin account that is allowed to invite users.
+# SLACK_URL - URL to your Slack
+# Token Generation: https://api.slack.com/custom-integrations/legacy-tokens
+#########################
+SLACK_TOKEN = os.environ.get('AA_SLACK_TOKEN', '')
+SLACK_URL = os.environ.get('AA_SLACK_URL', 'https://my.slack.com/')
 
 #####################################
 # Logging Configuration
